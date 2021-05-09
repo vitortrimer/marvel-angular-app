@@ -1,0 +1,59 @@
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  img.loading {
+    width: 64px;
+  }
+
+  .character {
+    display: flex;
+
+    .character__image {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      width: 220px;
+    }
+
+    .character__about {
+      margin-left: 16px;
+      max-width: 320px;
+    }
+  }
+
+  .comic {
+    margin-top: 32px;
+
+    h2 {
+      text-align: center;
+    }
+
+    .comic__container {
+      display: flex;
+      align-items: flex-end;
+      padding-top: 32px;
+
+      .comic__infos {
+        max-width: 320px;
+        margin-right: 16px;
+      }
+
+      .comic__image {
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        height: 320px;
+      }
+    }
+  }
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

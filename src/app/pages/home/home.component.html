@@ -1,0 +1,18 @@
+<main>
+  <h1 class="title">
+    Personagens
+  </h1>
+  <div class="characters">
+    <div [routerLink]="['/character/' + character.id]" *ngFor="let character of characters" class="characters__item">
+      <app-character-card [imageUrl]="character.thumbnail.path+'.'+character.thumbnail.extension" [name]="character.name" ></app-character-card>
+    </div>
+  </div>
+  <div class="actions">
+    <button [disabled]="loading" class="load-data" (click)="getCharactersData()">
+      <img *ngIf="loading else textElse" class="loading" src="../../../assets/images/spin.svg" alt="Carregando dados...">
+      <ng-template #textElse>
+        Mais personagens
+      </ng-template>
+    </button>
+  </div>
+</main>

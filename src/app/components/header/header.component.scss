@@ -1,0 +1,14 @@
+@import "/src/assets/styles/variables.scss";
+
+header.header {
+  display: flex;
+  justify-content: center;
+
+  height: 48px;
+  cursor: pointer;
+  background: $color-accent;
+
+  .header__logo {
+    width: 84px;
+  }
+}

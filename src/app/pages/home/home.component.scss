@@ -1,0 +1,61 @@
+@import "/src/assets/styles/variables.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 32px;
+  h1 {
+    margin: 12px;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: $secondary-color;
+  }
+
+  .characters {
+    display: inline;
+    margin: 0 auto;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .characters__item {
+      padding: 8px;
+      float: left;
+      display: block;
+      height: 320px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 24px 0;
+
+    .loading {
+      height: 32px;
+    }
+
+    button.load-data {
+      padding: 12px 16px;
+
+      color: $bg-color;
+      font-weight: 600;
+
+      cursor: pointer;
+      border-radius: 4px;
+      background-color: $color-accent;
+
+      &:disabled {
+        cursor: default;
+      }
+    }
+  }
+}

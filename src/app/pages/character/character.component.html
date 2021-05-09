@@ -1,0 +1,47 @@
+
+<main>
+  <img class="loading" *ngIf="isLoadingCharacter else loadedCharacter" src="../../../assets/images/spin-red.svg" alt="Carregando personagem">
+  <ng-template #loadedCharacter>
+    <div  *ngIf="character" class="character">
+      <img class="character__image" [src]="character.thumbnail.path + '.' + character.thumbnail.extension" />
+      <div class="character__about">
+        <div>
+          <strong>
+            Nome:
+          </strong>
+          {{character.name}}
+        </div>
+        <div>
+          <strong>
+            Descrição:
+          </strong>
+          <span class="description">
+            {{character.description}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <div *ngIf="mostExpensiveComic" class="comic">
+    <h2>HQ Mais cara do personagem</h2>
+    <div class="comic__container">
+      <div class="comic__infos">
+        <div>
+          <strong>Título: </strong>
+          {{ mostExpensiveComic.title }}
+        </div>
+        <div>
+          <strong>Descrição: </strong>
+          <span class="description">
+            {{ mostExpensiveComic.description }}
+          </span>
+        </div>
+        <div>
+          <strong>Preço: </strong>
+          ${{ mostExpensiveComic.prices[0].price }}
+        </div>
+      </div>
+      <img class="comic__image" [src]="mostExpensiveComic.images[0].path + '.' + mostExpensiveComic.images[0].extension" alt="">
+    </div>
+  </div>
+</main>
